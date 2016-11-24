@@ -22,7 +22,7 @@
     <ProjectGuid>{FDC6D0BD-4B17-4048-86B0-5AE76E7C9ED7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>practice5</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -149,6 +149,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Frame.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="KeyEvent.h" />
   </ItemGroup>

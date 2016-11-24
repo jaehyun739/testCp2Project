@@ -1,7 +1,8 @@
-#include <process.h>
+//#include <process.h>
 #include <iostream>
-#include "KeyEvent.h"
-#include "Game.h"
+//#include "KeyEvent.h"
+//#include "Game.h"
+#include "Frame.h"
 using namespace std;
 /*Thread Exam*/
 /*
@@ -31,6 +32,7 @@ unsigned int __stdcall keyEvent(void*) {
 }
 */
 /*Mini Game Exam*/
+/*
 Game* game = new Game();
 unsigned int __stdcall mythread(void*)
 {
@@ -50,10 +52,10 @@ unsigned int __stdcall keyEvent(void*)
 		if (i != -1) game->setDirection(i);
 	}
 	return 0;
-}
+}*/
 int main() {
 	//ground 0<x<30 0<y<20
-	HANDLE handleA, handleB;
+	/*HANDLE handleA, handleB;
 
 	handleA = (HANDLE)_beginthreadex(0, 0, &mythread, (void*)0, 0, 0);
 	handleB = (HANDLE)_beginthreadex(0, 0, &keyEvent, (void*)0, 0, 0);
@@ -63,6 +65,16 @@ int main() {
 
 	CloseHandle(handleA);
 	CloseHandle(handleB);
+	*/
+	try {
+		Frame *f1 = new Frame;
+		Frame *f2 = new Frame[10];
 
+		delete f1;
+		delete[] f2;
+	}
+	catch (string msg) {
+		cout << "Error msg :" << msg << endl;
+	}
 	return 0;
 }
